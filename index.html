@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ebuka Maduka | Portfolio</title>
+	
+	<!-- box icons -->
+	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  
+	<!-- custom css -->
+	<link rel="stylesheet" href="css/style.css">
+	</head>
+	
+	<body>
+	
+		<!-- header design -->
+		<header class="header">
+			<a href="#" class="logo">Portfolio</a>
+			<i class='bx bx-menu' id="menu-icon"></i>
+			
+			<nav class="navbar">
+				<a href="#home" class="active">Home</a>
+				<a href="#about">About</a>
+				<a href="#services">Services</a>
+				<a href="#portfolio">Portfolio</a>
+				<a href="#contact">Contact</a>
+			</nav>
+		</header>
+		
+		<!--Home section design-->
+		<section class="home" id="home">
+			<div class="home-content">
+				<h3>Hello, it's me</h3>
+				<h1>Ebuka Maduka</h1>
+				<h3>And i'm a <span class="multiple-text"></span></h3>
+				<p>it better come out well</p>
+				<div class="social-media"> 
+					<a href="https://wwww.facebook.com/ebuks1" target="_blank" ><i class='bx bxl-facebook' ></i></a>
+					<a href="https://www.x.com/ebuksmaduks" target="_blank" ><i class='bx bxl-twitter'></i></a>
+					<a href="https://www.linkedin.com/in/ebuksmaduks/" target="_blank" ><i class='bx bxl-linkedin' ></i></a>
+					<a href="https://www.instagram.com/ebuksmaduks" target="_blank" ><i class='bx bxl-instagram' ></i></a>
+
+				</div>
+				<a href="files\EBUKA MADUKA (2).pdf" target="_blank" class="btn">Download CV</a>		
+				</div>
+
+			<div class="home-img"> 
+				<img src="images/home.jpg" alt="">
+
+			</div>
+		</section>
+
+		<!--about section design-->
+		<section class="about" id="about">
+			<div class="about-img">
+				<img src="images/about.png" alt="">
+			</div>
+			
+			<div class="about-content">
+				<h2 class="heading">About <span>Me</span></h2>
+				<h3>Data Analyst</h3>
+				<p>I am Ebuka. A self-driven professional who enjoys innovation, 
+					overcoming obstacles, picking up new skills, 
+					and fostering growth in others. 
+					No matter how long the project, I aim to improve the efficiency of your company. 
+					I'm constantly looking for ways to boost output and revenue. 
+					I succeed when my clients do.</p>
+					<a href="#" class="btn"> Read More </a>
+			</div>
+		</section>
+
+		<!--services section design-->
+		<section class="services" id="services">
+			<h2 class="heading">My <span>Services</span></h2>
+
+			<div class="services-container">	
+				
+				<div class="services-box">
+					<i class='bx bxs-data'></i>
+					<h3>Data Analyst</h3>
+					<p>I collect, analyze and communicate data for various decisions and solutions.</p>
+					<a href="moredata.html" class="btn">Read more</a>
+				</div>	
+
+				<div class="services-box">
+					<i class='bx bx-code-alt' ></i>
+					<h3>Web Development</h3>
+					<p>I create and maintain websites with web technologies such as HTML, CSS, Javascript and Reactjs.</p>
+					<a href="moreweb.html" class="btn">Read more</a>
+				</div>	
+
+				<div class="services-box">
+					<i class='bx bx-pencil'></i>
+					<h3>Fine Art</h3>
+					<p>I express my creativity and imagination through visual works that have aesthetic and intellectual value.</p>
+					<a href="more.html"  class="btn">Read more</a>
+				</div>	
+				
+			</div>
+		</section>
+
+		<!--portfolio section design-->
+		<section class="portfolio" id="portfolio">
+			<h2 class="heading">Latest <span>Project</span></h2>
+
+			<div class="portfolio-container">
+				<div class="portfolio-box">
+					<img src="images/portfolio1.png" alt="">
+					<div class="portfolio-layer">
+						<h4>Data Analyst</h4>
+						<p>To fill later</p>
+						<a href="#"><i class='bx bx-link-external'></i></a>
+					</div>
+				</div>
+
+				<div class="portfolio-box">
+					<img src="images/portfolio2.png" alt="">
+						<div class="portfolio-layer">
+							<h4>Data Analyst</h4>
+							<p>To fill later</p>
+				<a href="dataportfolio.html"><i class='bx bx-link-external'></i></a>
+
+				</div>
+			</div>
+		</section>
+
+		<!--contact section design-->
+		<section class="contact" id="contact">
+			<h2 class="heading">Contact <span>Me</span></h2>
+
+<form id="my-form">
+				<div class="input-box">
+					<input type="text" name="name" placeholder="Full Name" required>
+					<input type="email" name="email" placeholder="Email Address" required>
+
+				</div>
+
+				<div class="input-box">
+					<input type="tel" name="phone" placeholder="Mobile Number">
+					<input type="text" name="subject" placeholder="Email Subject" required>
+
+				</div>
+
+				<textarea name="message" id="" cols="30" rows="10" placeholder="Your Message" required></textarea>
+				<input type="submit" value="Send Message" class="btn"> 
+			
+
+				<div id="form-messages"></div>
+
+				<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+				<script>
+				  $(function() {
+					$('#my-form').submit(function(event) {
+					  event.preventDefault();
+				
+					  var formData = $(this).serialize();
+				
+					  $.ajax({
+						type: 'POST',
+						url: 'https://formspree.io/f/xkndogvj',
+						data: formData
+					})
+					  .fail(function(data) {
+						$('#form-messages').html('<p class="error">Message has been  sent.</p>');
+					    $('#my-form')[0].reset();
+					
+					})
+					  .done(function(response) {
+						$('#form-messages').html('<p class="success">Your message has been sent!</p>');
+						$('#my-form')[0].reset();
+					  
+					});
+					});
+				  });
+				</script>
+			</form>
+
+		
+
+		</section>
+
+		
+			<!-- footer design-->
+			<footer class="footer">
+				<div class="footer-text">
+					<p>Copyright &copy; 2024 by Mr Roman | All rights Reserved.</p>
+				</div>
+
+				<div class="footer-iconTop">
+					<a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
+				</div>
+			</footer>
+
+		<!--scroll reveal-->
+		<script src="https://unpkg.com/scrollreveal"></script>
+
+
+		<!--typed js-->
+		<script src="http://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+		<!--custom js-->
+		<script src="js/script.js"></script>
+	</body>
+
+</html>

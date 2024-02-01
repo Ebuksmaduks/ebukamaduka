@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ebuka Maduka | Portfolio</title>
+	
+	<!-- box icons -->
+	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  
+	<!-- custom css -->
+	<link rel="stylesheet" href="css/style.css">
+</head>
+        
+<body>
+
+
+		<!-- header design -->
+		<header class="header">
+			<a href="index.html" class="logo">Portfolio</a>
+			<i class='bx bx-menu' id="menu-icon"></i>
+			
+			<nav class="navbar">
+				<a href="index.html#home" >Home</a>
+				<a href="index.html#about">About</a>
+				<a href="index.html#services">Services</a>
+				<a href="index.html#portfolio">Portfolio</a>
+				<a href="index.html#contact">Contact</a>
+			</nav>
+		</header>
+        <section >
+           
+                <h2 class="heading">Data Analyst Portfolio Project – <span>Sales Management</span></h2>
+               
+                <div class="portfolio-container">
+                    <div class="portfolio-box">
+                        <img src="images/portfolio1.png" alt="">
+                        <div class="portfolio-layer">
+                            <h4>Sales dashboard</h4>
+                        </div>
+                    </div>
+    
+                    <div class="portfolio-box">
+                        <img src="images/portfolio2.png" alt="">
+                            <div class="portfolio-layer">
+                                <h4>Data model</h4>
+                               
+                    </div>
+                    </div>
+
+                    <div class="portfolio-box">
+                        <img src="images/portfolio2.png" alt="">
+                            <div class="portfolio-layer">
+                                <h4>SQL queries</h4>
+                            </div>
+                    </div>
+                </div>
+                
+                <div class="dataportfolio">
+                <h3>Business Request & User Stories </h3>
+                <br>
+                <p> The business request for this data analyst project was an executive sales report for sales managers. 
+                    Based on the request that was made from the business 
+                    the following user stories were defined to fulfill delivery and ensure 
+                    that acceptance criteria’s were maintained throughout the project.</p>
+                <br>
+
+                <div class="table-responsive">
+                    <table>
+                      <thead>
+                        <tr>
+                          <th>Role</th>
+                          <th>Request / Demand</th>
+                          <th>User Value</th>
+                          <th>Acceptance Criteria</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Sales Manager</td>
+                          <td>To get a dashboard overview of internet sales</td>
+                          <td>Can follow better which customers and products sell the best</td>
+                          <td>A Power BI dashboard that updates data once a day </td>
+                        </tr>
+                        <tr>
+                          <td>Sales Representative</td>
+                          <td>A Detailed Overview of Internet Sales per Customers</td>
+                          <td>Can follow up with my customers who buy the most and who we can sell more to</td>
+                          <td>A Power BI dashboard that allows me to filter data for each customer</td>
+                        </tr>
+
+                        <tr>
+                            <td>Sales Representative</td>
+                            <td>A detailed overview of Internet Sales per Products</td>
+                            <td>Can follow up my Products that sell the most</td>
+                            <td>A Power BI dashboard that allows me to filter data for each Product</td>
+                          </tr>
+                        <tr>
+                          <td>Sales Manager</td>
+                          <td>A dashboard overview of Internet sales</td>
+                          <td>Follow sales over time against the budget</td>
+                          <td>A Power BI dashboard with graphs and KPIs comparing against the budget.</td>
+                        </tr>
+                        
+                      </tbody>
+                    </table>
+                  </div>
+
+                <br>
+
+                <h3>Data Cleansing & Transformation (SQL)</h3>
+                <br>
+                <p> To create the necessary data model for doing analysis and fulfilling the business needs defined in the user stories the following tables were extracted using SQL.
+
+                    One data source (sales budgets) was provided in Excel format and were connected in the data model in a later step of the process.
+                    
+                    Below are the SQL statements for cleansing and transforming necessary data.</p>
+                    <br>
+                    <br>
+
+                    <h4>Dim_Calender:</h4>
+                    <br>
+                    
+                      <div class="sql-box">
+                        <img src="images\dim_calender.png" alt="">
+                        
+                          
+                        
+                      </div>
+                   
+
+                    <br>
+                    <br>
+
+                    <h4>Dim_Customers:</h4>
+                    <br>
+                    <div class="sql-box">
+                      <img src="images\dim_custumer.png" alt="">
+                      
+                        
+                      
+                    </div>
+                    <br>
+                    <br>
+
+                    <h4>Dim_Products:</h4>
+                    <br>
+                    <div class="sql-box">
+                      <img src="images\dim_product.png" alt="">
+                      
+                        
+                      
+                    </div>
+
+                    <br>
+                    <br>
+
+                    <h4>Fact_InternetSales:</h4>
+                    <br>
+                    <div class="sql-box">
+                      <img src="images\fact.png" alt="">
+                      
+                     
+                      
+                    </div>
+                    <br>
+
+                    <h3>Data Model</h3> <br>
+                    <p> Below is a screenshot of the data model after cleansed and
+                       prepared tables were read into Power BI.
+                      <br>
+                      <br>
+                      This data model also shows how FACT_Budget has been connected to FACT_InternetSales
+                       and other necessary DIM tables.</p>
+
+                       <div class="sql-box">
+                        <img src="images\data_model.png" alt="">
+                        
+                          
+                        
+                      </div>
+                      <br>
+                      <br>
+                      <h3>Sales Management Dashboard</h3> <br>
+                    <p> The finished sales management dashboard with one page with works as a dashboard 
+                      and overview, with two other pages focused on combining tables for necessary details 
+                      and visualizations to show sales over time, 
+                      per customers and per products.</p>
+
+                       <div class="sqll-box">
+                        <img src="images\salesdashboard.png" alt="">
+                        
+                          
+                        
+                      </div>
+                </div>
+    </section>
+ <!--custom js-->
+ <script src="js/script.js"></script>
+</body>
+
+</html>
